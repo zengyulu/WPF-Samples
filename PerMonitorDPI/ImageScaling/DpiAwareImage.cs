@@ -15,30 +15,30 @@ namespace ImageScaling
 
         public DpiAwareImage() : base()
         {
-            this.Initialized += DpiAwareImage_Initialized;
+            //this.Initialized += DpiAwareImage_Initialized;
         }
 
         // on initial load, ensure we are using the right scaled image, based on the DPI.
-        private void DpiAwareImage_Initialized(object sender, EventArgs e)
-        {
-            DpiScale newDpi = VisualTreeHelper.GetDpi(sender as Visual);
-            ScaleRightImage(newDpi);
-        }
+        //private void DpiAwareImage_Initialized(object sender, EventArgs e)
+        //{
+        //    DpiScale newDpi = VisualTreeHelper.GetDpi(sender as Visual);
+        //    ScaleRightImage(newDpi);
+        //}
         
         // when DPI changes, ensure we are using the right scaled image, based on the DPI.
-        protected override void OnDpiChanged(DpiScale oldDpi, DpiScale newDpi)
-        {
-            ScaleRightImage(newDpi);
-        }
+        //protected override void OnDpiChanged(DpiScale oldDpi, DpiScale newDpi)
+        //{
+        //    ScaleRightImage(newDpi);
+        //}
 
-        private void ScaleRightImage(DpiScale newDpi)
-        {
-            // update bestScale
-            bestScale = ImageDpiHelper.GetBestScale(newDpi.PixelsPerDip);
+        //private void ScaleRightImage(DpiScale newDpi)
+        //{
+        //    // update bestScale
+        //    bestScale = ImageDpiHelper.GetBestScale(newDpi.PixelsPerDip);
 
-            string imageUrl = ImageDpiHelper.GetDesiredImageUrlForDpi(this);
-            UpdateImageSource(this, imageUrl);
-        }
+        //    string imageUrl = ImageDpiHelper.GetDesiredImageUrlForDpi(this);
+        //    UpdateImageSource(this, imageUrl);
+        //}
 
         public void UpdateImageSource(Image image, string newImagePath)
         {

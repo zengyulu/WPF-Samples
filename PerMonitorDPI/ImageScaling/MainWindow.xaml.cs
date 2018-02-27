@@ -27,7 +27,7 @@ namespace ImageScaling
             Image image = (Image)sender;
             UpdateImageSourceForDpi(image);
 
-            image.DpiChanged += Image_DpiChanged;
+            //image.DpiChanged += Image_DpiChanged;
         }
 
         // Ensure image of appropriate DPI is loaded when DPI changes
@@ -41,7 +41,7 @@ namespace ImageScaling
         {
             string newImageUrl = ImageDpiHelper.GetDesiredImageUrlForDpi(image);
             ImageDpiHelper.UpdateImageSource(image, newImageUrl);
-            textLabel.Text = newImageUrl + " for DPI of " + (VisualTreeHelper.GetDpi(image).PixelsPerDip * 100);
+            textLabel.Text = newImageUrl + " for DPI of " + (/*VisualTreeHelper.GetDpi(image).PixelsPerDip **/ 100);
         }
     }
 }

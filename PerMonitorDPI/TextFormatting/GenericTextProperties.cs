@@ -247,6 +247,8 @@ namespace TextFormatting
         private Brush _backgroundBrush;
         private BaselineAlignment _baselineAlignment;
         private CultureInfo _culture;
+
+        public double PixelsPerDip { get; }
         #endregion
     }
 }

@@ -16,8 +16,8 @@ namespace ImageScaling
         /// <returns>image URL for the most appropriate scale, given DPI</returns>
         public static string GetDesiredImageUrlForDpi(Image image)
         {            
-            DpiScale imageScaleInfo = VisualTreeHelper.GetDpi(image);
-            int bestScale = ImageDpiHelper.GetBestScale(imageScaleInfo.PixelsPerDip);
+            //DpiScale imageScaleInfo = VisualTreeHelper.GetDpi(image);
+            //int bestScale = ImageDpiHelper.GetBestScale(imageScaleInfo.PixelsPerDip);
 
             var sourceUrl = image.Source.ToString();
             string imagePattern = Regex.Replace(sourceUrl, ".scale-[0-9]{3}.", ".scale-{0}.");
@@ -25,7 +25,7 @@ namespace ImageScaling
             string newImagePath = null;
             if (imagePattern != null)
             {
-                newImagePath = string.Format(imagePattern, bestScale);
+                newImagePath = string.Format(imagePattern, 1/*bestScale*/);
             }
 
             return newImagePath;

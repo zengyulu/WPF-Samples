@@ -66,6 +66,8 @@ namespace TextFormatting
             get { return _currentRendering; }
             set { _currentRendering = value; }
         }
+
+        public double PixelsPerDip { get; }
         #endregion
 
         #region Private Fields

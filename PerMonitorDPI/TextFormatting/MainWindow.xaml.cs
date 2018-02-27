@@ -27,15 +27,15 @@ namespace TextFormatting
             InitializeComponent();
         }
 
-        protected override void OnDpiChanged(DpiScale oldDpiScaleInfo, DpiScale newDpiScaleInfo)
-        {
-            _pixelsPerDip = newDpiScaleInfo.PixelsPerDip;
-            UpdateFormattedText(_pixelsPerDip);
-        }
+        //protected override void OnDpiChanged(DpiScale oldDpiScaleInfo, DpiScale newDpiScaleInfo)
+        //{
+        //    _pixelsPerDip = newDpiScaleInfo.PixelsPerDip;
+        //    UpdateFormattedText(_pixelsPerDip);
+        //}
 
         private void Window_Loaded(object sender, EventArgs e)
         {
-            _pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
+            //_pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
             // Enumerate the fonts and add them to the font family combobox.
             foreach (System.Windows.Media.FontFamily fontFamily in Fonts.SystemFontFamilies)
             {

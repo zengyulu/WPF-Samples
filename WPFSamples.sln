@@ -527,6 +527,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx = PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx
 		README.md = README.md
+		Unitests.default.runsettings = Unitests.default.runsettings
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomApplicationClass", "Application Management\CustomApplication\CustomApplicationClass\CustomApplicationClass.csproj", "{DF1BF5B2-38D8-47B4-9565-2122B982E3A9}"
@@ -538,6 +539,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditBoxControlLibrary", "Sample Applications\ExpenseIt\EditBoxControlLibrary\EditBoxControlLibrary.csproj", "{558EEE03-6927-4FE6-AEB6-972769960849}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseItDemo", "Sample Applications\ExpenseIt\ExpenseItDemo\ExpenseItDemo.csproj", "{D1729F17-99A5-45AF-AB38-72FA6ECCE609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcDemo.UnitTests", "CalcDemo.UnitTests\CalcDemo.UnitTests.csproj", "{758600DE-5AB1-45E5-A9A1-C1852105A98D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -4877,6 +4880,26 @@ Global
 		{D1729F17-99A5-45AF-AB38-72FA6ECCE609}.Release|Win32.Build.0 = Release|Any CPU
 		{D1729F17-99A5-45AF-AB38-72FA6ECCE609}.Release|x64.ActiveCfg = Release|Any CPU
 		{D1729F17-99A5-45AF-AB38-72FA6ECCE609}.Release|x64.Build.0 = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|Win32.Build.0 = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Debug|x64.Build.0 = Debug|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|ARM.Build.0 = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Win32.ActiveCfg = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|Win32.Build.0 = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|x64.ActiveCfg = Release|Any CPU
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -5145,6 +5168,7 @@ Global
 		{B420065D-BD33-4129-8981-7CC055957988} = {455CE1DE-2222-44AC-B93B-6A40A99A3E3D}
 		{558EEE03-6927-4FE6-AEB6-972769960849} = {07258053-D6F1-4D8F-B3E4-A93423EFDF78}
 		{D1729F17-99A5-45AF-AB38-72FA6ECCE609} = {07258053-D6F1-4D8F-B3E4-A93423EFDF78}
+		{758600DE-5AB1-45E5-A9A1-C1852105A98D} = {122369C4-906B-4398-9F7D-DA33916262CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40F475E9-645C-42AA-8846-55D8AA39EE3F}

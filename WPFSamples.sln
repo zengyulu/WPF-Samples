@@ -526,8 +526,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1114A46F-2963-4B4C-8756-DD517011FBF7}"
 	ProjectSection(SolutionItems) = preProject
 		PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx = PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx
+		mstest.default.testsettings = mstest.default.testsettings
 		README.md = README.md
-		Unitests.default.runsettings = Unitests.default.runsettings
+		vstests.default.runsettings = vstests.default.runsettings
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomApplicationClass", "Application Management\CustomApplication\CustomApplicationClass\CustomApplicationClass.csproj", "{DF1BF5B2-38D8-47B4-9565-2122B982E3A9}"

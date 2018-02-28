@@ -526,7 +526,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1114A46F-2963-4B4C-8756-DD517011FBF7}"
 	ProjectSection(SolutionItems) = preProject
 		PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx = PerMonitorDPI\Developer Guide - Per Monitor DPI - WPF Preview.docx
-		mstest.default.testsettings = mstest.default.testsettings
+		mstests.default.testsettings = mstests.default.testsettings
 		README.md = README.md
 		vstests.default.runsettings = vstests.default.runsettings
 	EndProjectSection

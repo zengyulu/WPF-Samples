@@ -9,8 +9,9 @@ pipeline {
 	stage('Initial') {
 		steps {
 			echo "Running Build #${env.BUILD_ID}!"
-			echo "Clean workspace on agent"
-			bat "del ${NUGET_FOLDER}\\*.* /s /q"
+			//echo "Clean workspace on agent"
+			//bat "del ${NUGET_FOLDER}\\*.* /s /q"
+			//bat "rmdir ${NUGET_FOLDER}\\* /q"
 		}
 	}
   

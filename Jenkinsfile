@@ -10,7 +10,7 @@ pipeline {
 		steps {
 			echo "Running Build #${env.BUILD_ID}!"
 			echo "Clean workspace on agent"
-			bat 'del ${NUGET_FOLDER}\\*.* /s /q'
+			bat "del ${NUGET_FOLDER}\\*.* /s /q"
 		}
 	}
   

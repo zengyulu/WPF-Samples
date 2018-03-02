@@ -6,16 +6,18 @@ pipeline {
     
   }
   stages {
-	stage('Initial') {
+	stage('Cleanup') {
 		steps {
-			echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}!"
+			echo "Running Build ${env.BUILD_ID}!"
+			echo "Clean workspace on agent"
+			bat 'del ${WORKSPACE}\\*.* /s /q'
 		}
 	}
   
     stage('Checkout') {
       steps {
         echo "Check out from Git repository ..."
-		git(url: 'https://github.com/zengyulu/WPF-Samples', branch: '#refs/heads/master')
+		git(url: 'https://github.com/zengyulu/WPF-Samples', branch: 'master')
       }
     }
 	

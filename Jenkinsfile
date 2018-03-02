@@ -6,9 +6,16 @@ pipeline {
     
   }
   stages {
+	stage('Init') {
+		steps {
+			echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}!"
+		}
+	}
+  
     stage('Checkout') {
       steps {
-        git(url: 'https://github.com/zengyulu/WPF-Samples', branch: '#refs/heads/master')
+        echo "Check out from Git repository ..."
+		git(url: 'https://github.com/zengyulu/WPF-Samples', branch: '#refs/heads/master')
       }
     }
   }

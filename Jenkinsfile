@@ -6,11 +6,11 @@ pipeline {
     
   }
   stages {
-	stage('Cleanup') {
+	stage('Initial') {
 		steps {
-			echo "Running Build ${env.BUILD_ID}!"
-			echo "Clean workspace on agent"
-			bat 'del ${WORKSPACE}\\*.* /s /q'
+			echo "Running Build #${env.BUILD_ID}!"
+			//echo "Clean workspace on agent"
+			//bat 'del ${WORKSPACE}\\*.* /s /q'
 		}
 	}
   
@@ -21,7 +21,7 @@ pipeline {
       }
     }
 	
-	stage('Nuget Restore') {
+	stage('NuGet Restore') {
 		steps {
 			echo "Nuget restore packages"
 			bat '${NUGET_FULLPATH} restore ${WORKSPACE}\\WPFSamples.sln -OutputDirectory C:\\nuget'

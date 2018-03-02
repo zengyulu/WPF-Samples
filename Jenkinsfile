@@ -9,8 +9,8 @@ pipeline {
 	stage('Initial') {
 		steps {
 			echo "Running Build #${env.BUILD_ID}!"
-			//echo "Clean workspace on agent"
-			//bat 'del ${WORKSPACE}\\*.* /s /q'
+			echo "Clean workspace on agent"
+			bat 'del ${NUGET_FOLDER}\\*.* /s /q'
 		}
 	}
   
@@ -24,19 +24,23 @@ pipeline {
 	stage('NuGet Restore') {
 		steps {
 			echo "Nuget restore packages"
-			bat "${NUGET_FULLPATH} restore ${WORKSPACE}\\WPFSamples.sln -OutputDirectory C:\\nuget"
+			bat "${NUGET_FULLPATH} restore ${WORKSPACE}\\${VS_SOLUTION} -OutputDirectory C:\\nuget"
 		}
 	}
 	
 	stage('MSBuild') {
 		steps {
 			echo "Start MSBuild"
-			bat "\"${tool 'MSBuild'}\" ${WORKSPACE}\\WPFSamples.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+			script {
+				def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+				bat "${msbuild} ${WORKSPACE}\\${VS_SOLUTION} /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+			}
 		}
 	}
   }
   environment {
 	NUGET_FOLDER = 'C:\\nuget'
 	NUGET_FULLPATH = 'C:\\nuget\\nuget.exe'
+	VS_SOLUTION = 'WPFSamples.sln'
   }
 }

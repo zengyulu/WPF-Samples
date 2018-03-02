@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="db492f17-efeb-4585-a92d-2d5e5a98c706" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>WPF Samples Project</name>
+  <description>Example Project</description>
+  <parameters>
+    <param name="system.build.example.schmea" value="WPFSamples_Typhoon_EP102" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_4" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Success Rate",
+    "sourceBuildTypeId": "WpfSamplesProject_DesTia15ep102Compile",
+    "key": "SuccessRate"
+  },
+  {
+    "type": "valueType",
+    "title": "buildFinishing",
+    "sourceBuildTypeId": "WpfSamplesProject_DesTia15ep102Compile",
+    "key": "buildStageDuration:buildFinishing"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_5" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="WpfSamples_HttpsGithubComZengyuluWpfSamplesRefsHeadsMaster" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

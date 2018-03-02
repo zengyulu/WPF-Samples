@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="76bcd354-8035-4527-b3fd-e99c6b21945c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>DES_TIA15_EP102_Compile</name>
+  <description />
+  <settings ref="WPFApp_CompileTemplate_v1">
+    <options>
+      <option name="artifactRules" value="+:CalcDemo.UnitTests\bin\Debug\* =&gt; Outcome\CalcDemo.UnitTests.zip&#xA;+:vstests.default.runsettings =&gt; Outcome\CalcDemo.UnitTests.zip&#xA;+:mstests.default.testsettings =&gt; Outcome\CalcDemo.UnitTests.zip" />
+      <option name="buildNumberPattern" value="%build.counter%" />
+    </options>
+    <parameters>
+      <param name="VCTargetsPath" value="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets" />
+    </parameters>
+    <build-runners order="RUNNER_5, RUNNER_6" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

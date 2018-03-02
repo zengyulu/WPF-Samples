@@ -33,8 +33,8 @@ pipeline {
 		steps {
 			echo "Start MSBuild"
 			script {
-				def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
-				bat "${msbuild} ${WORKSPACE}\\${VS_SOLUTION} /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+				//def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+				bat "${MSBUILD_PATH} ${WORKSPACE}\\${VS_SOLUTION} /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
 			}
 		}
 	}
@@ -43,5 +43,6 @@ pipeline {
 	NUGET_FOLDER = 'C:\\nuget'
 	NUGET_FULLPATH = 'C:\\nuget\\nuget.exe'
 	VS_SOLUTION = 'WPFSamples.sln'
+	MSBUILD_PATH = 'C:\\Program Files (x86)\\MSBuild\\14.0\\Bin\\msbuild.exe'
   }
 }

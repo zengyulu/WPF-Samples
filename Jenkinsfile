@@ -24,7 +24,7 @@ pipeline {
 	stage('NuGet Restore') {
 		steps {
 			echo "Nuget restore packages"
-			bat '${NUGET_FULLPATH} restore ${WORKSPACE}\\WPFSamples.sln -OutputDirectory C:\\nuget'
+			bat "${NUGET_FULLPATH} restore ${WORKSPACE}\\WPFSamples.sln -OutputDirectory C:\\nuget"
 		}
 	}
 	

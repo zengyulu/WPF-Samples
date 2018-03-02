@@ -43,6 +43,6 @@ pipeline {
 	NUGET_FOLDER = 'C:\\nuget'
 	NUGET_FULLPATH = 'C:\\nuget\\nuget.exe'
 	VS_SOLUTION = 'WPFSamples.sln'
-	MSBUILD_PATH = 'C:\\Program Files (x86)\\MSBuild\\14.0\\Bin\\msbuild.exe'
+	MSBUILD_PATH = '\"C:\\Program Files (x86)\\MSBuild\\14.0\\Bin\\msbuild.exe\"'
   }
 }

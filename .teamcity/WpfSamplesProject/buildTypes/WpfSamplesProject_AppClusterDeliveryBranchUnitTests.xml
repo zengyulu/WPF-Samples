@@ -16,7 +16,7 @@
       <param name="RunSettingsFilePath" value="%TestFolder%\%RunSettingsFileName%" />
       <param name="TestFolder" value="C:\Test" />
     </parameters>
-    <build-runners order="RUNNER_7, RUNNER_3, RUNNER_5, RUNNER_6">
+    <build-runners order="RUNNER_7, RUNNER_3">
       <runner id="RUNNER_7" name="Copy test settings files" type="simpleRunner">
         <parameters>
           <param name="org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource" value="Job configuration" />
@@ -31,7 +31,18 @@ copy .\%MSTestSettingsFileName% %MSTestSettingsFilePath%]]></param>
     </build-runners>
     <vcs-settings />
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="artifactory">
+        <parameters>
+          <param name="org.jfrog.artifactory.selectedTriggerServer.deployerUsername" value="zengyu" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.pollingInterval" value="300" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.targetItems" value="master/Siemens.Automation.Components.3rdParty.*" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.targetRepo" value="nuget-wpfsamples.components-local-dev" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.urlId" value="0" />
+          <param name="secure:org.jfrog.artifactory.selectedTriggerServer.deployerPassword" value="credentialsJSON:68fc0038-2590-4b2a-9e1a-bce81238a443" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_2" sourceBuildTypeId="WpfSamplesProject_DesTia15ep102Compile" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />

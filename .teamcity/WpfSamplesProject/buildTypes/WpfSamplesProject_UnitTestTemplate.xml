@@ -47,7 +47,18 @@
     </build-runners>
     <vcs-settings />
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="artifactory">
+        <parameters>
+          <param name="org.jfrog.artifactory.selectedTriggerServer.deployerUsername" value="zengyu" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.pollingInterval" value="300" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.targetItems" value="Siemens.Automation.*" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.targetRepo" value="debian-dev-local" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.urlId" value="0" />
+          <param name="secure:org.jfrog.artifactory.selectedTriggerServer.deployerPassword" value="credentialsJSON:68fc0038-2590-4b2a-9e1a-bce81238a443" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <dependencies>
       <depend-on sourceBuildTypeId="WpfSamplesProject_DesTia15ep102Compile">
         <options>

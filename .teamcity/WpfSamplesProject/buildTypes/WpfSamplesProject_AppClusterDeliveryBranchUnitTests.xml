@@ -36,7 +36,7 @@ copy .\%MSTestSettingsFileName% %MSTestSettingsFilePath%]]></param>
         <parameters>
           <param name="org.jfrog.artifactory.selectedTriggerServer.deployerUsername" value="zengyu" />
           <param name="org.jfrog.artifactory.selectedTriggerServer.pollingInterval" value="300" />
-          <param name="org.jfrog.artifactory.selectedTriggerServer.targetItems" value="master/Siemens.Automation.Components.3rdParty.*" />
+          <param name="org.jfrog.artifactory.selectedTriggerServer.targetItems" value="Siemens.Automation.Components.3rdParty.*" />
           <param name="org.jfrog.artifactory.selectedTriggerServer.targetRepo" value="nuget-wpfsamples.components-local-dev" />
           <param name="org.jfrog.artifactory.selectedTriggerServer.urlId" value="0" />
           <param name="secure:org.jfrog.artifactory.selectedTriggerServer.deployerPassword" value="credentialsJSON:68fc0038-2590-4b2a-9e1a-bce81238a443" />
